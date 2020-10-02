@@ -1,15 +1,42 @@
 {
-  "name": "use-validation",
+  "name": "@alexjamesmalcolm/use-validation",
+  "description": "A React hook abstraction of the Constraint Validation API that supports asynchronous validation and custom error messages.",
+  "author": {
+    "name": "Alex Malcolm",
+    "email": "alexjamesmalcolm@gmail.com",
+    "url": "https://alexjamesmalcolm.com"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "react hook",
+    "promise",
+    "async"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexjamesmalcolm/use-validation.git"
+  },
+  "homepage": "http://www.alexjamesmalcolm.com/use-validation/",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
+  "private": false,
+  "main": "output/index.js",
+  "peerDependencies": {
+    "react": "^16.13.1"
+  },
+  "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
+    "@types/lodash.debounce": "^4.0.6",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "auto-changelog": "^2.2.1",
+    "cross-env": "^7.0.2",
+    "get-folder-size": "^2.0.1",
+    "lodash.debounce": "^4.0.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
@@ -17,9 +44,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf output && tsc --noEmit false --module CommonJS",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test:coverage": "npm test -- --watchAll --coverage --collectCoverageFrom=src/lib/**/*.ts --collectCoverageFrom=src/lib/**/*.tsx",
+    "test:ci": "cross-env CI=true npm test -- --coverage --collectCoverageFrom=src/lib/**/*.ts --collectCoverageFrom=src/lib/**/*.tsx",
+    "output-size": "node ./get-size.js",
+    "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "eslintConfig": {
     "extends": "react-app"
