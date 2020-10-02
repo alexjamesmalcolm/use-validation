@@ -34,28 +34,28 @@ const useValidation = (validator: Validator, options: Options = {}) => {
     },
     [actOnInput]
   );
-  const debouncedValidation = useMemo<
-    (resolve: (value: unknown) => void) => void
-  >(
+  const debounced = useMemo(
     () =>
-      debounce((resolve) => {
-        actOnInput((input) => {
-          resolve(
-            validator(
-              getValueFromInput ? getValueFromInput(input) : input.value
-            )
-          );
-        });
+      debounce((callback) => {
+        callback();
       }, debounceWait || 0),
-    [actOnInput, debounceWait, getValueFromInput, validator]
+    [debounceWait]
   );
   const checkValidity = useCallback<() => Promise<unknown>>(
     () =>
       new Promise((resolve) => {
         setMessage("Validating...");
-        debouncedValidation(resolve);
+        debounced(() => {
+          actOnInput((input) => {
+            resolve(
+              validator(
+                getValueFromInput ? getValueFromInput(input) : input.value
+              )
+            );
+          });
+        });
       }),
-    [debouncedValidation, setMessage]
+    [actOnInput, debounced, getValueFromInput, setMessage, validator]
   );
   const reportValidity = useCallback<() => void>(() => {
     checkValidity().then((validityCheckResult) => {
