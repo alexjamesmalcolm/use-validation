@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useMemo } from "react";
 import debounce from "lodash.debounce";
 
 type ValidationResponse = string | boolean;
@@ -8,28 +8,48 @@ type Validator = (
 
 const style = { display: "contents" };
 
-const useValidation = (validator: Validator, debounceWait?: number) => {
+interface Options {
+  debounceWait?: number;
+  getValueFromInput?: (input: HTMLInputElement) => unknown;
+  getInputFromWrapper?: (wrapper: HTMLDivElement) => HTMLInputElement;
+}
+
+const useValidation = (validator: Validator, options: Options = {}) => {
   const parent = useRef<HTMLDivElement>(null);
+  const {
+    debounceWait,
+    getInputFromWrapper = (wrapper: HTMLDivElement) =>
+      wrapper.children[0] as HTMLInputElement,
+    getValueFromInput,
+  } = options;
   const actOnInput = useCallback(
     (callback: (input: HTMLInputElement) => void) => {
-      parent.current &&
-        callback(parent.current.children[0] as HTMLInputElement);
+      parent.current && callback(getInputFromWrapper(parent.current));
     },
-    []
+    [getInputFromWrapper]
   );
-  const setMessage = useCallback(
+  const setMessage = useCallback<(message: string) => void>(
     (message: string) => {
       actOnInput((input) => input.setCustomValidity(message));
     },
     [actOnInput]
   );
-  const debouncedValidation = useCallback(
-    debounce((resolve: (value?: unknown) => void) => {
-      actOnInput((input) => resolve(validator(input.value)));
-    }, debounceWait || 0),
-    []
+  const debouncedValidation = useMemo<
+    (resolve: (value: unknown) => void) => void
+  >(
+    () =>
+      debounce((resolve) => {
+        actOnInput((input) => {
+          resolve(
+            validator(
+              getValueFromInput ? getValueFromInput(input) : input.value
+            )
+          );
+        });
+      }, debounceWait || 0),
+    [actOnInput, debounceWait, getValueFromInput, validator]
   );
-  const checkValidity = useCallback(
+  const checkValidity = useCallback<() => Promise<unknown>>(
     () =>
       new Promise((resolve) => {
         setMessage("Validating...");
@@ -37,7 +57,7 @@ const useValidation = (validator: Validator, debounceWait?: number) => {
       }),
     [debouncedValidation, setMessage]
   );
-  const reportValidity = useCallback(() => {
+  const reportValidity = useCallback<() => void>(() => {
     checkValidity().then((validityCheckResult) => {
       setMessage(
         typeof validityCheckResult === "string"
@@ -50,7 +70,7 @@ const useValidation = (validator: Validator, debounceWait?: number) => {
   }, [checkValidity, setMessage]);
   useEffect(() => {
     reportValidity();
-  }, [reportValidity, validator]);
+  }, [reportValidity]);
   return useCallback(
     ({ children }) => (
       <div onChangeCapture={reportValidity} ref={parent} style={style}>

@@ -26,11 +26,10 @@ const isPokemon = (name: string) => {
 
 const App = () => {
   const PositiveNumberValidator = useValidation(isNumberPositive);
-  const DebouncedPositiveNumberValidator = useValidation(
-    isNumberPositive,
-    2000
-  );
-  const PokemonNameValidator = useValidation(isPokemon, 2000);
+  const DebouncedPositiveNumberValidator = useValidation(isNumberPositive, {
+    debounceWait: 2000,
+  });
+  const PokemonNameValidator = useValidation(isPokemon, { debounceWait: 2000 });
   return (
     <form className={styles.container}>
       <label>
