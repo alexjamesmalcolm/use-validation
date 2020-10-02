@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import useValidation from "./lib/useValidation";
 import styles from "./App.module.css";
 
@@ -29,7 +29,13 @@ const App = () => {
   const DebouncedPositiveNumberValidator = useValidation(isNumberPositive, {
     debounceWait: 2000,
   });
+  const [pokemonType, setPokemonType] = useState();
+  const [pokemonName, setPokemonName] = useState();
   const PokemonNameValidator = useValidation(isPokemon, { debounceWait: 2000 });
+  const handlePokemonNameChange = useCallback(
+    (e) => setPokemonName(e.target.value),
+    []
+  );
   return (
     <form className={styles.container}>
       <label>
@@ -47,7 +53,13 @@ const App = () => {
       <label>
         Pokemon name
         <PokemonNameValidator>
-          <input id="pokemon-name" type="text" required />
+          <input
+            id="pokemon-name"
+            type="text"
+            required
+            value={pokemonName}
+            onChange={handlePokemonNameChange}
+          />
         </PokemonNameValidator>
       </label>
       <input type="submit" />
