@@ -44,7 +44,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf output && tsc --noEmit false --module CommonJS",
+    "build": "rm -rf output && tsc --project tsconfig.package.json",
     "test": "react-scripts test",
     "test:coverage": "npm test -- --watchAll --coverage --collectCoverageFrom=src/lib/**/*.ts --collectCoverageFrom=src/lib/**/*.tsx",
     "test:ci": "cross-env CI=true npm test -- --coverage --collectCoverageFrom=src/lib/**/*.ts --collectCoverageFrom=src/lib/**/*.tsx",
