@@ -11,8 +11,10 @@ const isNumberPositive = (number: number) => {
 
 const isPokemon = (name: string) => {
   if (!name) return true;
+  if (!isNaN(Number(name))) return "This is a number";
   return fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`, {
     headers: { "Content-Type": "application/json" },
+    method: "HEAD",
   })
     .then((response) => {
       if (response.status === 200) return true;
@@ -34,24 +36,20 @@ const App = () => {
       <label>
         Positive Number
         <PositiveNumberValidator>
-          <input max="10" type="number" required />
+          <input id="positive-number" max="10" type="number" required />
         </PositiveNumberValidator>
       </label>
       <label>
         Positive Number but validated after typing stops for 2000 millisecond
         <DebouncedPositiveNumberValidator>
-          <input type="number" required />
+          <input id="positive-number-debounced" type="number" required />
         </DebouncedPositiveNumberValidator>
       </label>
       <label>
         Pokemon name
         <PokemonNameValidator>
-          <input type="text" required />
+          <input id="pokemon-name" type="text" required />
         </PokemonNameValidator>
-      </label>
-      <label>
-        Input without a wrapper to compare styling
-        <input max="10" type="number" required />
       </label>
       <input type="submit" />
     </form>

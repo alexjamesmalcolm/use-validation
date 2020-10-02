@@ -1,162 +1,1463 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders learn react link 1`] = `
-Object {
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <form
-        class="container"
-      >
-        <label>
-          Positive Number
-          <div
-            style="display: contents;"
-          >
-            <input
-              max="10"
-              required=""
-              type="number"
-            />
-          </div>
-        </label>
-        <label>
-          Positive Number but validated after typing stops for 2000 millisecond
-          <div
-            style="display: contents;"
-          >
-            <input
-              required=""
-              type="number"
-            />
-          </div>
-        </label>
-        <label>
-          Pokemon name
-          <div
-            style="display: contents;"
-          >
-            <input
-              required=""
-              type="text"
-            />
-          </div>
-        </label>
-        <label>
-          Input without a wrapper to compare styling
-          <input
-            max="10"
-            required=""
-            type="number"
-          />
-        </label>
-        <input
-          type="submit"
-        />
-      </form>
-    </div>
-  </body>,
-  "container": <div>
-    <form
-      class="container"
-    >
-      <label>
-        Positive Number
-        <div
-          style="display: contents;"
-        >
-          <input
-            max="10"
-            required=""
-            type="number"
-          />
-        </div>
-      </label>
-      <label>
-        Positive Number but validated after typing stops for 2000 millisecond
-        <div
-          style="display: contents;"
-        >
-          <input
-            required=""
-            type="number"
-          />
-        </div>
-      </label>
-      <label>
-        Pokemon name
-        <div
-          style="display: contents;"
-        >
-          <input
-            required=""
-            type="text"
-          />
-        </div>
-      </label>
-      <label>
-        Input without a wrapper to compare styling
-        <input
-          max="10"
-          required=""
-          type="number"
-        />
-      </label>
-      <input
-        type="submit"
-      />
-    </form>
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
+exports[`snapshot 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "container",
+    },
+    "children": Array [
+      Object {
+        "attribs": Object {},
+        "children": Array [
+          Object {
+            "data": "Positive Number",
+            "next": Object {
+              "attribs": Object {
+                "style": "display:contents",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "id": "positive-number",
+                    "max": "10",
+                    "required": "",
+                    "type": "number",
+                  },
+                  "children": Array [],
+                  "name": "input",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "id": undefined,
+                    "max": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "id": undefined,
+                    "max": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                },
+              ],
+              "name": "div",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "style": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "style": undefined,
+              },
+            },
+            "parent": [Circular],
+            "prev": null,
+            "type": "text",
+          },
+          Object {
+            "attribs": Object {
+              "style": "display:contents",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "id": "positive-number",
+                  "max": "10",
+                  "required": "",
+                  "type": "number",
+                },
+                "children": Array [],
+                "name": "input",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "id": undefined,
+                  "max": undefined,
+                  "required": undefined,
+                  "type": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "id": undefined,
+                  "max": undefined,
+                  "required": undefined,
+                  "type": undefined,
+                },
+              },
+            ],
+            "name": "div",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": Object {
+              "data": "Positive Number",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": null,
+              "type": "text",
+            },
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "style": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "style": undefined,
+            },
+          },
+        ],
+        "name": "label",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": Object {
+          "attribs": Object {},
+          "children": Array [
+            Object {
+              "data": "Positive Number but validated after typing stops for 2000 millisecond",
+              "next": Object {
+                "attribs": Object {
+                  "style": "display:contents",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "id": "positive-number-debounced",
+                      "required": "",
+                      "type": "number",
+                    },
+                    "children": Array [],
+                    "name": "input",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "id": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "id": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                  },
+                ],
+                "name": "div",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": [Circular],
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "style": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "style": undefined,
+                },
+              },
+              "parent": [Circular],
+              "prev": null,
+              "type": "text",
+            },
+            Object {
+              "attribs": Object {
+                "style": "display:contents",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "id": "positive-number-debounced",
+                    "required": "",
+                    "type": "number",
+                  },
+                  "children": Array [],
+                  "name": "input",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "id": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "id": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                },
+              ],
+              "name": "div",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": Object {
+                "data": "Positive Number but validated after typing stops for 2000 millisecond",
+                "next": [Circular],
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "style": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "style": undefined,
+              },
+            },
+          ],
+          "name": "label",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": Object {
+            "attribs": Object {},
+            "children": Array [
+              Object {
+                "data": "Pokemon name",
+                "next": Object {
+                  "attribs": Object {
+                    "style": "display:contents",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "id": "pokemon-name",
+                        "required": "",
+                        "type": "text",
+                      },
+                      "children": Array [],
+                      "name": "input",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "id": undefined,
+                        "required": undefined,
+                        "type": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "id": undefined,
+                        "required": undefined,
+                        "type": undefined,
+                      },
+                    },
+                  ],
+                  "name": "div",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": [Circular],
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "style": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "style": undefined,
+                  },
+                },
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+              Object {
+                "attribs": Object {
+                  "style": "display:contents",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "id": "pokemon-name",
+                      "required": "",
+                      "type": "text",
+                    },
+                    "children": Array [],
+                    "name": "input",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "id": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "id": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                  },
+                ],
+                "name": "div",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": Object {
+                  "data": "Pokemon name",
+                  "next": [Circular],
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "style": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "style": undefined,
+                },
+              },
+            ],
+            "name": "label",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": Object {
+              "attribs": Object {
+                "type": "submit",
+              },
+              "children": Array [],
+              "name": "input",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "type": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "type": undefined,
+              },
+            },
+            "parent": [Circular],
+            "prev": [Circular],
+            "type": "tag",
+            "x-attribsNamespace": Object {},
+            "x-attribsPrefix": Object {},
+          },
+          "parent": [Circular],
+          "prev": [Circular],
+          "type": "tag",
+          "x-attribsNamespace": Object {},
+          "x-attribsPrefix": Object {},
+        },
+        "parent": [Circular],
+        "prev": null,
+        "type": "tag",
+        "x-attribsNamespace": Object {},
+        "x-attribsPrefix": Object {},
+      },
+      Object {
+        "attribs": Object {},
+        "children": Array [
+          Object {
+            "data": "Positive Number but validated after typing stops for 2000 millisecond",
+            "next": Object {
+              "attribs": Object {
+                "style": "display:contents",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "id": "positive-number-debounced",
+                    "required": "",
+                    "type": "number",
+                  },
+                  "children": Array [],
+                  "name": "input",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "id": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "id": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                },
+              ],
+              "name": "div",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "style": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "style": undefined,
+              },
+            },
+            "parent": [Circular],
+            "prev": null,
+            "type": "text",
+          },
+          Object {
+            "attribs": Object {
+              "style": "display:contents",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "id": "positive-number-debounced",
+                  "required": "",
+                  "type": "number",
+                },
+                "children": Array [],
+                "name": "input",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "id": undefined,
+                  "required": undefined,
+                  "type": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "id": undefined,
+                  "required": undefined,
+                  "type": undefined,
+                },
+              },
+            ],
+            "name": "div",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": Object {
+              "data": "Positive Number but validated after typing stops for 2000 millisecond",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": null,
+              "type": "text",
+            },
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "style": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "style": undefined,
+            },
+          },
+        ],
+        "name": "label",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": Object {
+          "attribs": Object {},
+          "children": Array [
+            Object {
+              "data": "Pokemon name",
+              "next": Object {
+                "attribs": Object {
+                  "style": "display:contents",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "id": "pokemon-name",
+                      "required": "",
+                      "type": "text",
+                    },
+                    "children": Array [],
+                    "name": "input",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "id": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "id": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                  },
+                ],
+                "name": "div",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": [Circular],
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "style": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "style": undefined,
+                },
+              },
+              "parent": [Circular],
+              "prev": null,
+              "type": "text",
+            },
+            Object {
+              "attribs": Object {
+                "style": "display:contents",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "id": "pokemon-name",
+                    "required": "",
+                    "type": "text",
+                  },
+                  "children": Array [],
+                  "name": "input",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "id": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "id": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                },
+              ],
+              "name": "div",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": Object {
+                "data": "Pokemon name",
+                "next": [Circular],
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "style": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "style": undefined,
+              },
+            },
+          ],
+          "name": "label",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": Object {
+            "attribs": Object {
+              "type": "submit",
+            },
+            "children": Array [],
+            "name": "input",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": [Circular],
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "type": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "type": undefined,
+            },
+          },
+          "parent": [Circular],
+          "prev": [Circular],
+          "type": "tag",
+          "x-attribsNamespace": Object {},
+          "x-attribsPrefix": Object {},
+        },
+        "parent": [Circular],
+        "prev": Object {
+          "attribs": Object {},
+          "children": Array [
+            Object {
+              "data": "Positive Number",
+              "next": Object {
+                "attribs": Object {
+                  "style": "display:contents",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "id": "positive-number",
+                      "max": "10",
+                      "required": "",
+                      "type": "number",
+                    },
+                    "children": Array [],
+                    "name": "input",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "id": undefined,
+                      "max": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "id": undefined,
+                      "max": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                  },
+                ],
+                "name": "div",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": [Circular],
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "style": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "style": undefined,
+                },
+              },
+              "parent": [Circular],
+              "prev": null,
+              "type": "text",
+            },
+            Object {
+              "attribs": Object {
+                "style": "display:contents",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "id": "positive-number",
+                    "max": "10",
+                    "required": "",
+                    "type": "number",
+                  },
+                  "children": Array [],
+                  "name": "input",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "id": undefined,
+                    "max": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "id": undefined,
+                    "max": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                },
+              ],
+              "name": "div",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": Object {
+                "data": "Positive Number",
+                "next": [Circular],
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "style": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "style": undefined,
+              },
+            },
+          ],
+          "name": "label",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": [Circular],
+          "parent": [Circular],
+          "prev": null,
+          "type": "tag",
+          "x-attribsNamespace": Object {},
+          "x-attribsPrefix": Object {},
+        },
+        "type": "tag",
+        "x-attribsNamespace": Object {},
+        "x-attribsPrefix": Object {},
+      },
+      Object {
+        "attribs": Object {},
+        "children": Array [
+          Object {
+            "data": "Pokemon name",
+            "next": Object {
+              "attribs": Object {
+                "style": "display:contents",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "id": "pokemon-name",
+                    "required": "",
+                    "type": "text",
+                  },
+                  "children": Array [],
+                  "name": "input",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "id": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "id": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                },
+              ],
+              "name": "div",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "style": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "style": undefined,
+              },
+            },
+            "parent": [Circular],
+            "prev": null,
+            "type": "text",
+          },
+          Object {
+            "attribs": Object {
+              "style": "display:contents",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "id": "pokemon-name",
+                  "required": "",
+                  "type": "text",
+                },
+                "children": Array [],
+                "name": "input",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "id": undefined,
+                  "required": undefined,
+                  "type": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "id": undefined,
+                  "required": undefined,
+                  "type": undefined,
+                },
+              },
+            ],
+            "name": "div",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": Object {
+              "data": "Pokemon name",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": null,
+              "type": "text",
+            },
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "style": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "style": undefined,
+            },
+          },
+        ],
+        "name": "label",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": Object {
+          "attribs": Object {
+            "type": "submit",
+          },
+          "children": Array [],
+          "name": "input",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": null,
+          "parent": [Circular],
+          "prev": [Circular],
+          "type": "tag",
+          "x-attribsNamespace": Object {
+            "type": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "type": undefined,
+          },
+        },
+        "parent": [Circular],
+        "prev": Object {
+          "attribs": Object {},
+          "children": Array [
+            Object {
+              "data": "Positive Number but validated after typing stops for 2000 millisecond",
+              "next": Object {
+                "attribs": Object {
+                  "style": "display:contents",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "id": "positive-number-debounced",
+                      "required": "",
+                      "type": "number",
+                    },
+                    "children": Array [],
+                    "name": "input",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "id": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "id": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                  },
+                ],
+                "name": "div",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": [Circular],
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "style": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "style": undefined,
+                },
+              },
+              "parent": [Circular],
+              "prev": null,
+              "type": "text",
+            },
+            Object {
+              "attribs": Object {
+                "style": "display:contents",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "id": "positive-number-debounced",
+                    "required": "",
+                    "type": "number",
+                  },
+                  "children": Array [],
+                  "name": "input",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "id": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "id": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                },
+              ],
+              "name": "div",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": Object {
+                "data": "Positive Number but validated after typing stops for 2000 millisecond",
+                "next": [Circular],
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "style": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "style": undefined,
+              },
+            },
+          ],
+          "name": "label",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": [Circular],
+          "parent": [Circular],
+          "prev": Object {
+            "attribs": Object {},
+            "children": Array [
+              Object {
+                "data": "Positive Number",
+                "next": Object {
+                  "attribs": Object {
+                    "style": "display:contents",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "id": "positive-number",
+                        "max": "10",
+                        "required": "",
+                        "type": "number",
+                      },
+                      "children": Array [],
+                      "name": "input",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "id": undefined,
+                        "max": undefined,
+                        "required": undefined,
+                        "type": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "id": undefined,
+                        "max": undefined,
+                        "required": undefined,
+                        "type": undefined,
+                      },
+                    },
+                  ],
+                  "name": "div",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": [Circular],
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "style": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "style": undefined,
+                  },
+                },
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+              Object {
+                "attribs": Object {
+                  "style": "display:contents",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "id": "positive-number",
+                      "max": "10",
+                      "required": "",
+                      "type": "number",
+                    },
+                    "children": Array [],
+                    "name": "input",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "id": undefined,
+                      "max": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "id": undefined,
+                      "max": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                  },
+                ],
+                "name": "div",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": Object {
+                  "data": "Positive Number",
+                  "next": [Circular],
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "style": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "style": undefined,
+                },
+              },
+            ],
+            "name": "label",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": [Circular],
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {},
+            "x-attribsPrefix": Object {},
+          },
+          "type": "tag",
+          "x-attribsNamespace": Object {},
+          "x-attribsPrefix": Object {},
+        },
+        "type": "tag",
+        "x-attribsNamespace": Object {},
+        "x-attribsPrefix": Object {},
+      },
+      Object {
+        "attribs": Object {
+          "type": "submit",
+        },
+        "children": Array [],
+        "name": "input",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": null,
+        "parent": [Circular],
+        "prev": Object {
+          "attribs": Object {},
+          "children": Array [
+            Object {
+              "data": "Pokemon name",
+              "next": Object {
+                "attribs": Object {
+                  "style": "display:contents",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "id": "pokemon-name",
+                      "required": "",
+                      "type": "text",
+                    },
+                    "children": Array [],
+                    "name": "input",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "id": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "id": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                  },
+                ],
+                "name": "div",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": [Circular],
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "style": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "style": undefined,
+                },
+              },
+              "parent": [Circular],
+              "prev": null,
+              "type": "text",
+            },
+            Object {
+              "attribs": Object {
+                "style": "display:contents",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "id": "pokemon-name",
+                    "required": "",
+                    "type": "text",
+                  },
+                  "children": Array [],
+                  "name": "input",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "id": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "id": undefined,
+                    "required": undefined,
+                    "type": undefined,
+                  },
+                },
+              ],
+              "name": "div",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": Object {
+                "data": "Pokemon name",
+                "next": [Circular],
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "style": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "style": undefined,
+              },
+            },
+          ],
+          "name": "label",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": [Circular],
+          "parent": [Circular],
+          "prev": Object {
+            "attribs": Object {},
+            "children": Array [
+              Object {
+                "data": "Positive Number but validated after typing stops for 2000 millisecond",
+                "next": Object {
+                  "attribs": Object {
+                    "style": "display:contents",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "id": "positive-number-debounced",
+                        "required": "",
+                        "type": "number",
+                      },
+                      "children": Array [],
+                      "name": "input",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "id": undefined,
+                        "required": undefined,
+                        "type": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "id": undefined,
+                        "required": undefined,
+                        "type": undefined,
+                      },
+                    },
+                  ],
+                  "name": "div",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": [Circular],
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "style": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "style": undefined,
+                  },
+                },
+                "parent": [Circular],
+                "prev": null,
+                "type": "text",
+              },
+              Object {
+                "attribs": Object {
+                  "style": "display:contents",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "id": "positive-number-debounced",
+                      "required": "",
+                      "type": "number",
+                    },
+                    "children": Array [],
+                    "name": "input",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "id": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "id": undefined,
+                      "required": undefined,
+                      "type": undefined,
+                    },
+                  },
+                ],
+                "name": "div",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": Object {
+                  "data": "Positive Number but validated after typing stops for 2000 millisecond",
+                  "next": [Circular],
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "style": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "style": undefined,
+                },
+              },
+            ],
+            "name": "label",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": [Circular],
+            "parent": [Circular],
+            "prev": Object {
+              "attribs": Object {},
+              "children": Array [
+                Object {
+                  "data": "Positive Number",
+                  "next": Object {
+                    "attribs": Object {
+                      "style": "display:contents",
+                    },
+                    "children": Array [
+                      Object {
+                        "attribs": Object {
+                          "id": "positive-number",
+                          "max": "10",
+                          "required": "",
+                          "type": "number",
+                        },
+                        "children": Array [],
+                        "name": "input",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "id": undefined,
+                          "max": undefined,
+                          "required": undefined,
+                          "type": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "id": undefined,
+                          "max": undefined,
+                          "required": undefined,
+                          "type": undefined,
+                        },
+                      },
+                    ],
+                    "name": "div",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "style": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "style": undefined,
+                    },
+                  },
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "text",
+                },
+                Object {
+                  "attribs": Object {
+                    "style": "display:contents",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "id": "positive-number",
+                        "max": "10",
+                        "required": "",
+                        "type": "number",
+                      },
+                      "children": Array [],
+                      "name": "input",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "id": undefined,
+                        "max": undefined,
+                        "required": undefined,
+                        "type": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "id": undefined,
+                        "max": undefined,
+                        "required": undefined,
+                        "type": undefined,
+                      },
+                    },
+                  ],
+                  "name": "div",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": Object {
+                    "data": "Positive Number",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "text",
+                  },
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "style": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "style": undefined,
+                  },
+                },
+              ],
+              "name": "label",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+              "x-attribsNamespace": Object {},
+              "x-attribsPrefix": Object {},
+            },
+            "type": "tag",
+            "x-attribsNamespace": Object {},
+            "x-attribsPrefix": Object {},
+          },
+          "type": "tag",
+          "x-attribsNamespace": Object {},
+          "x-attribsPrefix": Object {},
+        },
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "type": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "type": undefined,
+        },
+      },
+    ],
+    "name": "form",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
 }
 `;

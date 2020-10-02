@@ -28,6 +28,8 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/enzyme": "^3.10.7",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^24.0.0",
     "@types/lodash.debounce": "^4.0.6",
     "@types/node": "^12.0.0",
@@ -35,11 +37,14 @@
     "@types/react-dom": "^16.9.0",
     "auto-changelog": "^2.2.1",
     "cross-env": "^7.0.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
     "get-folder-size": "^2.0.1",
     "lodash.debounce": "^4.0.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
+    "react-test-renderer": "^16.13.1",
     "typescript": "~3.7.2"
   },
   "scripts": {
