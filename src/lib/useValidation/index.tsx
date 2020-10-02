@@ -36,7 +36,7 @@ const useValidation = (validator: Validator, options: Options = {}) => {
   );
   const debounced = useMemo(
     () =>
-      debounce((callback) => {
+      debounce((callback: Function) => {
         callback();
       }, debounceWait || 0),
     [debounceWait]
