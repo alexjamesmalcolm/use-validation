@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useRef, useMemo } from "react";
-import debounce from "lodash.debounce";
 
 type ValidationResponse = string | boolean;
 type Validator = (
@@ -16,6 +15,7 @@ interface Options {
 
 const useValidation = (validator: Validator, options: Options = {}) => {
   const parent = useRef<HTMLDivElement>(null);
+  const timeoutId = useRef<number>(0);
   const debounceWait = useMemo(() => options.debounceWait || 0, [
     options.debounceWait,
   ]);
@@ -24,17 +24,18 @@ const useValidation = (validator: Validator, options: Options = {}) => {
       options.getValueFromInput || ((input: HTMLInputElement) => input.value),
     [options.getValueFromInput]
   );
-  const getInputFromWrapper = useMemo(
-    () =>
-      options.getInputFromWrapper ||
-      ((wrapper: HTMLDivElement) => wrapper.children[0] as HTMLInputElement),
-    [options.getInputFromWrapper]
-  );
   const actOnInput = useCallback(
     (callback: (input: HTMLInputElement) => void) => {
-      parent.current && callback(getInputFromWrapper(parent.current));
+      parent.current &&
+        callback(
+          (
+            options.getInputFromWrapper ||
+            ((wrapper: HTMLDivElement) =>
+              wrapper.children[0] as HTMLInputElement)
+          )(parent.current)
+        );
     },
-    [getInputFromWrapper]
+    [options.getInputFromWrapper]
   );
   const setMessage = useCallback(
     (message: string) => {
@@ -42,12 +43,22 @@ const useValidation = (validator: Validator, options: Options = {}) => {
     },
     [actOnInput]
   );
-  const debouncedValidation = useCallback(
-    debounce((resolve: (value?: unknown) => void) => {
+  type Resolve = (value?: unknown) => void;
+  const debouncedValidation = useMemo<(resolve: Resolve) => void>(() => {
+    clearTimeout(timeoutId.current);
+    const validatorFunc = (resolve: Resolve) => {
       actOnInput((input) => resolve(validator(getValueFromInput(input))));
-    }, debounceWait),
-    []
-  );
+    };
+    if (debounceWait === 0) {
+      return validatorFunc;
+    }
+    return (resolve) => {
+      clearTimeout(timeoutId.current);
+      timeoutId.current = (setTimeout(() => {
+        validatorFunc(resolve);
+      }, debounceWait) as unknown) as number;
+    };
+  }, [actOnInput, debounceWait, getValueFromInput, validator]);
   const checkValidity = useCallback(
     () =>
       new Promise((resolve) => {

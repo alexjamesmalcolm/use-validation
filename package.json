@@ -26,9 +26,6 @@
   "license": "MIT",
   "private": false,
   "main": "output/index.js",
-  "dependencies": {
-    "lodash.debounce": "x"
-  },
   "peerDependencies": {
     "react": ">= 16.8.x < 18"
   },

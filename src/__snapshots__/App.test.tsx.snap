@@ -11,7 +11,7 @@ initialize {
         "attribs": Object {},
         "children": Array [
           Object {
-            "data": "Positive Number",
+            "data": "First of Match: ",
             "next": Object {
               "attribs": Object {
                 "style": "display:contents",
@@ -19,10 +19,10 @@ initialize {
               "children": Array [
                 Object {
                   "attribs": Object {
-                    "id": "positive-number",
-                    "max": "10",
+                    "id": "first-match",
                     "required": "",
-                    "type": "number",
+                    "type": "text",
+                    "value": "",
                   },
                   "children": Array [],
                   "name": "input",
@@ -33,15 +33,15 @@ initialize {
                   "type": "tag",
                   "x-attribsNamespace": Object {
                     "id": undefined,
-                    "max": undefined,
                     "required": undefined,
                     "type": undefined,
+                    "value": undefined,
                   },
                   "x-attribsPrefix": Object {
                     "id": undefined,
-                    "max": undefined,
                     "required": undefined,
                     "type": undefined,
+                    "value": undefined,
                   },
                 },
               ],
@@ -69,10 +69,10 @@ initialize {
             "children": Array [
               Object {
                 "attribs": Object {
-                  "id": "positive-number",
-                  "max": "10",
+                  "id": "first-match",
                   "required": "",
-                  "type": "number",
+                  "type": "text",
+                  "value": "",
                 },
                 "children": Array [],
                 "name": "input",
@@ -83,15 +83,15 @@ initialize {
                 "type": "tag",
                 "x-attribsNamespace": Object {
                   "id": undefined,
-                  "max": undefined,
                   "required": undefined,
                   "type": undefined,
+                  "value": undefined,
                 },
                 "x-attribsPrefix": Object {
                   "id": undefined,
-                  "max": undefined,
                   "required": undefined,
                   "type": undefined,
+                  "value": undefined,
                 },
               },
             ],
@@ -100,7 +100,7 @@ initialize {
             "next": null,
             "parent": [Circular],
             "prev": Object {
-              "data": "Positive Number",
+              "data": "First of Match: ",
               "next": [Circular],
               "parent": [Circular],
               "prev": null,
@@ -121,7 +121,7 @@ initialize {
           "attribs": Object {},
           "children": Array [
             Object {
-              "data": "Positive Number but validated after typing stops for 2000 millisecond",
+              "data": "Second of Match: ",
               "next": Object {
                 "attribs": Object {
                   "style": "display:contents",
@@ -129,9 +129,10 @@ initialize {
                 "children": Array [
                   Object {
                     "attribs": Object {
-                      "id": "positive-number-debounced",
+                      "id": "second-match",
                       "required": "",
-                      "type": "number",
+                      "type": "text",
+                      "value": "",
                     },
                     "children": Array [],
                     "name": "input",
@@ -144,11 +145,13 @@ initialize {
                       "id": undefined,
                       "required": undefined,
                       "type": undefined,
+                      "value": undefined,
                     },
                     "x-attribsPrefix": Object {
                       "id": undefined,
                       "required": undefined,
                       "type": undefined,
+                      "value": undefined,
                     },
                   },
                 ],
@@ -176,9 +179,10 @@ initialize {
               "children": Array [
                 Object {
                   "attribs": Object {
-                    "id": "positive-number-debounced",
+                    "id": "second-match",
                     "required": "",
-                    "type": "number",
+                    "type": "text",
+                    "value": "",
                   },
                   "children": Array [],
                   "name": "input",
@@ -191,11 +195,13 @@ initialize {
                     "id": undefined,
                     "required": undefined,
                     "type": undefined,
+                    "value": undefined,
                   },
                   "x-attribsPrefix": Object {
                     "id": undefined,
                     "required": undefined,
                     "type": undefined,
+                    "value": undefined,
                   },
                 },
               ],
@@ -204,7 +210,7 @@ initialize {
               "next": null,
               "parent": [Circular],
               "prev": Object {
-                "data": "Positive Number but validated after typing stops for 2000 millisecond",
+                "data": "Second of Match: ",
                 "next": [Circular],
                 "parent": [Circular],
                 "prev": null,
@@ -222,132 +228,25 @@ initialize {
           "name": "label",
           "namespace": "http://www.w3.org/1999/xhtml",
           "next": Object {
-            "attribs": Object {},
-            "children": Array [
-              Object {
-                "data": "Pokemon name",
-                "next": Object {
-                  "attribs": Object {
-                    "style": "display:contents",
-                  },
-                  "children": Array [
-                    Object {
-                      "attribs": Object {
-                        "id": "pokemon-name",
-                        "required": "",
-                        "type": "text",
-                      },
-                      "children": Array [],
-                      "name": "input",
-                      "namespace": "http://www.w3.org/1999/xhtml",
-                      "next": null,
-                      "parent": [Circular],
-                      "prev": null,
-                      "type": "tag",
-                      "x-attribsNamespace": Object {
-                        "id": undefined,
-                        "required": undefined,
-                        "type": undefined,
-                      },
-                      "x-attribsPrefix": Object {
-                        "id": undefined,
-                        "required": undefined,
-                        "type": undefined,
-                      },
-                    },
-                  ],
-                  "name": "div",
-                  "namespace": "http://www.w3.org/1999/xhtml",
-                  "next": null,
-                  "parent": [Circular],
-                  "prev": [Circular],
-                  "type": "tag",
-                  "x-attribsNamespace": Object {
-                    "style": undefined,
-                  },
-                  "x-attribsPrefix": Object {
-                    "style": undefined,
-                  },
-                },
-                "parent": [Circular],
-                "prev": null,
-                "type": "text",
-              },
-              Object {
-                "attribs": Object {
-                  "style": "display:contents",
-                },
-                "children": Array [
-                  Object {
-                    "attribs": Object {
-                      "id": "pokemon-name",
-                      "required": "",
-                      "type": "text",
-                    },
-                    "children": Array [],
-                    "name": "input",
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                    "next": null,
-                    "parent": [Circular],
-                    "prev": null,
-                    "type": "tag",
-                    "x-attribsNamespace": Object {
-                      "id": undefined,
-                      "required": undefined,
-                      "type": undefined,
-                    },
-                    "x-attribsPrefix": Object {
-                      "id": undefined,
-                      "required": undefined,
-                      "type": undefined,
-                    },
-                  },
-                ],
-                "name": "div",
-                "namespace": "http://www.w3.org/1999/xhtml",
-                "next": null,
-                "parent": [Circular],
-                "prev": Object {
-                  "data": "Pokemon name",
-                  "next": [Circular],
-                  "parent": [Circular],
-                  "prev": null,
-                  "type": "text",
-                },
-                "type": "tag",
-                "x-attribsNamespace": Object {
-                  "style": undefined,
-                },
-                "x-attribsPrefix": Object {
-                  "style": undefined,
-                },
-              },
-            ],
-            "name": "label",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": Object {
-              "attribs": Object {
-                "type": "submit",
-              },
-              "children": Array [],
-              "name": "input",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": null,
-              "parent": [Circular],
-              "prev": [Circular],
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "type": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "type": undefined,
-              },
+            "attribs": Object {
+              "id": "submit",
+              "type": "submit",
             },
+            "children": Array [],
+            "name": "input",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
             "parent": [Circular],
             "prev": [Circular],
             "type": "tag",
-            "x-attribsNamespace": Object {},
-            "x-attribsPrefix": Object {},
+            "x-attribsNamespace": Object {
+              "id": undefined,
+              "type": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "id": undefined,
+              "type": undefined,
+            },
           },
           "parent": [Circular],
           "prev": [Circular],
@@ -365,7 +264,7 @@ initialize {
         "attribs": Object {},
         "children": Array [
           Object {
-            "data": "Positive Number but validated after typing stops for 2000 millisecond",
+            "data": "Second of Match: ",
             "next": Object {
               "attribs": Object {
                 "style": "display:contents",
@@ -373,9 +272,10 @@ initialize {
               "children": Array [
                 Object {
                   "attribs": Object {
-                    "id": "positive-number-debounced",
+                    "id": "second-match",
                     "required": "",
-                    "type": "number",
+                    "type": "text",
+                    "value": "",
                   },
                   "children": Array [],
                   "name": "input",
@@ -388,11 +288,13 @@ initialize {
                     "id": undefined,
                     "required": undefined,
                     "type": undefined,
+                    "value": undefined,
                   },
                   "x-attribsPrefix": Object {
                     "id": undefined,
                     "required": undefined,
                     "type": undefined,
+                    "value": undefined,
                   },
                 },
               ],
@@ -420,9 +322,10 @@ initialize {
             "children": Array [
               Object {
                 "attribs": Object {
-                  "id": "positive-number-debounced",
+                  "id": "second-match",
                   "required": "",
-                  "type": "number",
+                  "type": "text",
+                  "value": "",
                 },
                 "children": Array [],
                 "name": "input",
@@ -435,11 +338,13 @@ initialize {
                   "id": undefined,
                   "required": undefined,
                   "type": undefined,
+                  "value": undefined,
                 },
                 "x-attribsPrefix": Object {
                   "id": undefined,
                   "required": undefined,
                   "type": undefined,
+                  "value": undefined,
                 },
               },
             ],
@@ -448,7 +353,7 @@ initialize {
             "next": null,
             "parent": [Circular],
             "prev": Object {
-              "data": "Positive Number but validated after typing stops for 2000 millisecond",
+              "data": "Second of Match: ",
               "next": [Circular],
               "parent": [Circular],
               "prev": null,
@@ -466,139 +371,32 @@ initialize {
         "name": "label",
         "namespace": "http://www.w3.org/1999/xhtml",
         "next": Object {
-          "attribs": Object {},
-          "children": Array [
-            Object {
-              "data": "Pokemon name",
-              "next": Object {
-                "attribs": Object {
-                  "style": "display:contents",
-                },
-                "children": Array [
-                  Object {
-                    "attribs": Object {
-                      "id": "pokemon-name",
-                      "required": "",
-                      "type": "text",
-                    },
-                    "children": Array [],
-                    "name": "input",
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                    "next": null,
-                    "parent": [Circular],
-                    "prev": null,
-                    "type": "tag",
-                    "x-attribsNamespace": Object {
-                      "id": undefined,
-                      "required": undefined,
-                      "type": undefined,
-                    },
-                    "x-attribsPrefix": Object {
-                      "id": undefined,
-                      "required": undefined,
-                      "type": undefined,
-                    },
-                  },
-                ],
-                "name": "div",
-                "namespace": "http://www.w3.org/1999/xhtml",
-                "next": null,
-                "parent": [Circular],
-                "prev": [Circular],
-                "type": "tag",
-                "x-attribsNamespace": Object {
-                  "style": undefined,
-                },
-                "x-attribsPrefix": Object {
-                  "style": undefined,
-                },
-              },
-              "parent": [Circular],
-              "prev": null,
-              "type": "text",
-            },
-            Object {
-              "attribs": Object {
-                "style": "display:contents",
-              },
-              "children": Array [
-                Object {
-                  "attribs": Object {
-                    "id": "pokemon-name",
-                    "required": "",
-                    "type": "text",
-                  },
-                  "children": Array [],
-                  "name": "input",
-                  "namespace": "http://www.w3.org/1999/xhtml",
-                  "next": null,
-                  "parent": [Circular],
-                  "prev": null,
-                  "type": "tag",
-                  "x-attribsNamespace": Object {
-                    "id": undefined,
-                    "required": undefined,
-                    "type": undefined,
-                  },
-                  "x-attribsPrefix": Object {
-                    "id": undefined,
-                    "required": undefined,
-                    "type": undefined,
-                  },
-                },
-              ],
-              "name": "div",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": null,
-              "parent": [Circular],
-              "prev": Object {
-                "data": "Pokemon name",
-                "next": [Circular],
-                "parent": [Circular],
-                "prev": null,
-                "type": "text",
-              },
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "style": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "style": undefined,
-              },
-            },
-          ],
-          "name": "label",
-          "namespace": "http://www.w3.org/1999/xhtml",
-          "next": Object {
-            "attribs": Object {
-              "type": "submit",
-            },
-            "children": Array [],
-            "name": "input",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": null,
-            "parent": [Circular],
-            "prev": [Circular],
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "type": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "type": undefined,
-            },
+          "attribs": Object {
+            "id": "submit",
+            "type": "submit",
           },
+          "children": Array [],
+          "name": "input",
+          "namespace": "http://www.w3.org/1999/xhtml",
+          "next": null,
           "parent": [Circular],
           "prev": [Circular],
           "type": "tag",
-          "x-attribsNamespace": Object {},
-          "x-attribsPrefix": Object {},
+          "x-attribsNamespace": Object {
+            "id": undefined,
+            "type": undefined,
+          },
+          "x-attribsPrefix": Object {
+            "id": undefined,
+            "type": undefined,
+          },
         },
         "parent": [Circular],
         "prev": Object {
           "attribs": Object {},
           "children": Array [
             Object {
-              "data": "Positive Number",
+              "data": "First of Match: ",
               "next": Object {
                 "attribs": Object {
                   "style": "display:contents",
@@ -606,10 +404,10 @@ initialize {
                 "children": Array [
                   Object {
                     "attribs": Object {
-                      "id": "positive-number",
-                      "max": "10",
+                      "id": "first-match",
                       "required": "",
-                      "type": "number",
+                      "type": "text",
+                      "value": "",
                     },
                     "children": Array [],
                     "name": "input",
@@ -620,15 +418,15 @@ initialize {
                     "type": "tag",
                     "x-attribsNamespace": Object {
                       "id": undefined,
-                      "max": undefined,
                       "required": undefined,
                       "type": undefined,
+                      "value": undefined,
                     },
                     "x-attribsPrefix": Object {
                       "id": undefined,
-                      "max": undefined,
                       "required": undefined,
                       "type": undefined,
+                      "value": undefined,
                     },
                   },
                 ],
@@ -656,10 +454,10 @@ initialize {
               "children": Array [
                 Object {
                   "attribs": Object {
-                    "id": "positive-number",
-                    "max": "10",
+                    "id": "first-match",
                     "required": "",
-                    "type": "number",
+                    "type": "text",
+                    "value": "",
                   },
                   "children": Array [],
                   "name": "input",
@@ -670,15 +468,15 @@ initialize {
                   "type": "tag",
                   "x-attribsNamespace": Object {
                     "id": undefined,
-                    "max": undefined,
                     "required": undefined,
                     "type": undefined,
+                    "value": undefined,
                   },
                   "x-attribsPrefix": Object {
                     "id": undefined,
-                    "max": undefined,
                     "required": undefined,
                     "type": undefined,
+                    "value": undefined,
                   },
                 },
               ],
@@ -687,7 +485,7 @@ initialize {
               "next": null,
               "parent": [Circular],
               "prev": Object {
-                "data": "Positive Number",
+                "data": "First of Match: ",
                 "next": [Circular],
                 "parent": [Circular],
                 "prev": null,
@@ -716,361 +514,8 @@ initialize {
         "x-attribsPrefix": Object {},
       },
       Object {
-        "attribs": Object {},
-        "children": Array [
-          Object {
-            "data": "Pokemon name",
-            "next": Object {
-              "attribs": Object {
-                "style": "display:contents",
-              },
-              "children": Array [
-                Object {
-                  "attribs": Object {
-                    "id": "pokemon-name",
-                    "required": "",
-                    "type": "text",
-                  },
-                  "children": Array [],
-                  "name": "input",
-                  "namespace": "http://www.w3.org/1999/xhtml",
-                  "next": null,
-                  "parent": [Circular],
-                  "prev": null,
-                  "type": "tag",
-                  "x-attribsNamespace": Object {
-                    "id": undefined,
-                    "required": undefined,
-                    "type": undefined,
-                  },
-                  "x-attribsPrefix": Object {
-                    "id": undefined,
-                    "required": undefined,
-                    "type": undefined,
-                  },
-                },
-              ],
-              "name": "div",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": null,
-              "parent": [Circular],
-              "prev": [Circular],
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "style": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "style": undefined,
-              },
-            },
-            "parent": [Circular],
-            "prev": null,
-            "type": "text",
-          },
-          Object {
-            "attribs": Object {
-              "style": "display:contents",
-            },
-            "children": Array [
-              Object {
-                "attribs": Object {
-                  "id": "pokemon-name",
-                  "required": "",
-                  "type": "text",
-                },
-                "children": Array [],
-                "name": "input",
-                "namespace": "http://www.w3.org/1999/xhtml",
-                "next": null,
-                "parent": [Circular],
-                "prev": null,
-                "type": "tag",
-                "x-attribsNamespace": Object {
-                  "id": undefined,
-                  "required": undefined,
-                  "type": undefined,
-                },
-                "x-attribsPrefix": Object {
-                  "id": undefined,
-                  "required": undefined,
-                  "type": undefined,
-                },
-              },
-            ],
-            "name": "div",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": null,
-            "parent": [Circular],
-            "prev": Object {
-              "data": "Pokemon name",
-              "next": [Circular],
-              "parent": [Circular],
-              "prev": null,
-              "type": "text",
-            },
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "style": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "style": undefined,
-            },
-          },
-        ],
-        "name": "label",
-        "namespace": "http://www.w3.org/1999/xhtml",
-        "next": Object {
-          "attribs": Object {
-            "type": "submit",
-          },
-          "children": Array [],
-          "name": "input",
-          "namespace": "http://www.w3.org/1999/xhtml",
-          "next": null,
-          "parent": [Circular],
-          "prev": [Circular],
-          "type": "tag",
-          "x-attribsNamespace": Object {
-            "type": undefined,
-          },
-          "x-attribsPrefix": Object {
-            "type": undefined,
-          },
-        },
-        "parent": [Circular],
-        "prev": Object {
-          "attribs": Object {},
-          "children": Array [
-            Object {
-              "data": "Positive Number but validated after typing stops for 2000 millisecond",
-              "next": Object {
-                "attribs": Object {
-                  "style": "display:contents",
-                },
-                "children": Array [
-                  Object {
-                    "attribs": Object {
-                      "id": "positive-number-debounced",
-                      "required": "",
-                      "type": "number",
-                    },
-                    "children": Array [],
-                    "name": "input",
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                    "next": null,
-                    "parent": [Circular],
-                    "prev": null,
-                    "type": "tag",
-                    "x-attribsNamespace": Object {
-                      "id": undefined,
-                      "required": undefined,
-                      "type": undefined,
-                    },
-                    "x-attribsPrefix": Object {
-                      "id": undefined,
-                      "required": undefined,
-                      "type": undefined,
-                    },
-                  },
-                ],
-                "name": "div",
-                "namespace": "http://www.w3.org/1999/xhtml",
-                "next": null,
-                "parent": [Circular],
-                "prev": [Circular],
-                "type": "tag",
-                "x-attribsNamespace": Object {
-                  "style": undefined,
-                },
-                "x-attribsPrefix": Object {
-                  "style": undefined,
-                },
-              },
-              "parent": [Circular],
-              "prev": null,
-              "type": "text",
-            },
-            Object {
-              "attribs": Object {
-                "style": "display:contents",
-              },
-              "children": Array [
-                Object {
-                  "attribs": Object {
-                    "id": "positive-number-debounced",
-                    "required": "",
-                    "type": "number",
-                  },
-                  "children": Array [],
-                  "name": "input",
-                  "namespace": "http://www.w3.org/1999/xhtml",
-                  "next": null,
-                  "parent": [Circular],
-                  "prev": null,
-                  "type": "tag",
-                  "x-attribsNamespace": Object {
-                    "id": undefined,
-                    "required": undefined,
-                    "type": undefined,
-                  },
-                  "x-attribsPrefix": Object {
-                    "id": undefined,
-                    "required": undefined,
-                    "type": undefined,
-                  },
-                },
-              ],
-              "name": "div",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": null,
-              "parent": [Circular],
-              "prev": Object {
-                "data": "Positive Number but validated after typing stops for 2000 millisecond",
-                "next": [Circular],
-                "parent": [Circular],
-                "prev": null,
-                "type": "text",
-              },
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "style": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "style": undefined,
-              },
-            },
-          ],
-          "name": "label",
-          "namespace": "http://www.w3.org/1999/xhtml",
-          "next": [Circular],
-          "parent": [Circular],
-          "prev": Object {
-            "attribs": Object {},
-            "children": Array [
-              Object {
-                "data": "Positive Number",
-                "next": Object {
-                  "attribs": Object {
-                    "style": "display:contents",
-                  },
-                  "children": Array [
-                    Object {
-                      "attribs": Object {
-                        "id": "positive-number",
-                        "max": "10",
-                        "required": "",
-                        "type": "number",
-                      },
-                      "children": Array [],
-                      "name": "input",
-                      "namespace": "http://www.w3.org/1999/xhtml",
-                      "next": null,
-                      "parent": [Circular],
-                      "prev": null,
-                      "type": "tag",
-                      "x-attribsNamespace": Object {
-                        "id": undefined,
-                        "max": undefined,
-                        "required": undefined,
-                        "type": undefined,
-                      },
-                      "x-attribsPrefix": Object {
-                        "id": undefined,
-                        "max": undefined,
-                        "required": undefined,
-                        "type": undefined,
-                      },
-                    },
-                  ],
-                  "name": "div",
-                  "namespace": "http://www.w3.org/1999/xhtml",
-                  "next": null,
-                  "parent": [Circular],
-                  "prev": [Circular],
-                  "type": "tag",
-                  "x-attribsNamespace": Object {
-                    "style": undefined,
-                  },
-                  "x-attribsPrefix": Object {
-                    "style": undefined,
-                  },
-                },
-                "parent": [Circular],
-                "prev": null,
-                "type": "text",
-              },
-              Object {
-                "attribs": Object {
-                  "style": "display:contents",
-                },
-                "children": Array [
-                  Object {
-                    "attribs": Object {
-                      "id": "positive-number",
-                      "max": "10",
-                      "required": "",
-                      "type": "number",
-                    },
-                    "children": Array [],
-                    "name": "input",
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                    "next": null,
-                    "parent": [Circular],
-                    "prev": null,
-                    "type": "tag",
-                    "x-attribsNamespace": Object {
-                      "id": undefined,
-                      "max": undefined,
-                      "required": undefined,
-                      "type": undefined,
-                    },
-                    "x-attribsPrefix": Object {
-                      "id": undefined,
-                      "max": undefined,
-                      "required": undefined,
-                      "type": undefined,
-                    },
-                  },
-                ],
-                "name": "div",
-                "namespace": "http://www.w3.org/1999/xhtml",
-                "next": null,
-                "parent": [Circular],
-                "prev": Object {
-                  "data": "Positive Number",
-                  "next": [Circular],
-                  "parent": [Circular],
-                  "prev": null,
-                  "type": "text",
-                },
-                "type": "tag",
-                "x-attribsNamespace": Object {
-                  "style": undefined,
-                },
-                "x-attribsPrefix": Object {
-                  "style": undefined,
-                },
-              },
-            ],
-            "name": "label",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": [Circular],
-            "parent": [Circular],
-            "prev": null,
-            "type": "tag",
-            "x-attribsNamespace": Object {},
-            "x-attribsPrefix": Object {},
-          },
-          "type": "tag",
-          "x-attribsNamespace": Object {},
-          "x-attribsPrefix": Object {},
-        },
-        "type": "tag",
-        "x-attribsNamespace": Object {},
-        "x-attribsPrefix": Object {},
-      },
-      Object {
         "attribs": Object {
+          "id": "submit",
           "type": "submit",
         },
         "children": Array [],
@@ -1082,7 +527,7 @@ initialize {
           "attribs": Object {},
           "children": Array [
             Object {
-              "data": "Pokemon name",
+              "data": "Second of Match: ",
               "next": Object {
                 "attribs": Object {
                   "style": "display:contents",
@@ -1090,9 +535,10 @@ initialize {
                 "children": Array [
                   Object {
                     "attribs": Object {
-                      "id": "pokemon-name",
+                      "id": "second-match",
                       "required": "",
                       "type": "text",
+                      "value": "",
                     },
                     "children": Array [],
                     "name": "input",
@@ -1105,11 +551,13 @@ initialize {
                       "id": undefined,
                       "required": undefined,
                       "type": undefined,
+                      "value": undefined,
                     },
                     "x-attribsPrefix": Object {
                       "id": undefined,
                       "required": undefined,
                       "type": undefined,
+                      "value": undefined,
                     },
                   },
                 ],
@@ -1137,9 +585,10 @@ initialize {
               "children": Array [
                 Object {
                   "attribs": Object {
-                    "id": "pokemon-name",
+                    "id": "second-match",
                     "required": "",
                     "type": "text",
+                    "value": "",
                   },
                   "children": Array [],
                   "name": "input",
@@ -1152,11 +601,13 @@ initialize {
                     "id": undefined,
                     "required": undefined,
                     "type": undefined,
+                    "value": undefined,
                   },
                   "x-attribsPrefix": Object {
                     "id": undefined,
                     "required": undefined,
                     "type": undefined,
+                    "value": undefined,
                   },
                 },
               ],
@@ -1165,7 +616,7 @@ initialize {
               "next": null,
               "parent": [Circular],
               "prev": Object {
-                "data": "Pokemon name",
+                "data": "Second of Match: ",
                 "next": [Circular],
                 "parent": [Circular],
                 "prev": null,
@@ -1188,7 +639,7 @@ initialize {
             "attribs": Object {},
             "children": Array [
               Object {
-                "data": "Positive Number but validated after typing stops for 2000 millisecond",
+                "data": "First of Match: ",
                 "next": Object {
                   "attribs": Object {
                     "style": "display:contents",
@@ -1196,9 +647,10 @@ initialize {
                   "children": Array [
                     Object {
                       "attribs": Object {
-                        "id": "positive-number-debounced",
+                        "id": "first-match",
                         "required": "",
-                        "type": "number",
+                        "type": "text",
+                        "value": "",
                       },
                       "children": Array [],
                       "name": "input",
@@ -1211,11 +663,13 @@ initialize {
                         "id": undefined,
                         "required": undefined,
                         "type": undefined,
+                        "value": undefined,
                       },
                       "x-attribsPrefix": Object {
                         "id": undefined,
                         "required": undefined,
                         "type": undefined,
+                        "value": undefined,
                       },
                     },
                   ],
@@ -1243,9 +697,10 @@ initialize {
                 "children": Array [
                   Object {
                     "attribs": Object {
-                      "id": "positive-number-debounced",
+                      "id": "first-match",
                       "required": "",
-                      "type": "number",
+                      "type": "text",
+                      "value": "",
                     },
                     "children": Array [],
                     "name": "input",
@@ -1258,11 +713,13 @@ initialize {
                       "id": undefined,
                       "required": undefined,
                       "type": undefined,
+                      "value": undefined,
                     },
                     "x-attribsPrefix": Object {
                       "id": undefined,
                       "required": undefined,
                       "type": undefined,
+                      "value": undefined,
                     },
                   },
                 ],
@@ -1271,7 +728,7 @@ initialize {
                 "next": null,
                 "parent": [Circular],
                 "prev": Object {
-                  "data": "Positive Number but validated after typing stops for 2000 millisecond",
+                  "data": "First of Match: ",
                   "next": [Circular],
                   "parent": [Circular],
                   "prev": null,
@@ -1290,123 +747,7 @@ initialize {
             "namespace": "http://www.w3.org/1999/xhtml",
             "next": [Circular],
             "parent": [Circular],
-            "prev": Object {
-              "attribs": Object {},
-              "children": Array [
-                Object {
-                  "data": "Positive Number",
-                  "next": Object {
-                    "attribs": Object {
-                      "style": "display:contents",
-                    },
-                    "children": Array [
-                      Object {
-                        "attribs": Object {
-                          "id": "positive-number",
-                          "max": "10",
-                          "required": "",
-                          "type": "number",
-                        },
-                        "children": Array [],
-                        "name": "input",
-                        "namespace": "http://www.w3.org/1999/xhtml",
-                        "next": null,
-                        "parent": [Circular],
-                        "prev": null,
-                        "type": "tag",
-                        "x-attribsNamespace": Object {
-                          "id": undefined,
-                          "max": undefined,
-                          "required": undefined,
-                          "type": undefined,
-                        },
-                        "x-attribsPrefix": Object {
-                          "id": undefined,
-                          "max": undefined,
-                          "required": undefined,
-                          "type": undefined,
-                        },
-                      },
-                    ],
-                    "name": "div",
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                    "next": null,
-                    "parent": [Circular],
-                    "prev": [Circular],
-                    "type": "tag",
-                    "x-attribsNamespace": Object {
-                      "style": undefined,
-                    },
-                    "x-attribsPrefix": Object {
-                      "style": undefined,
-                    },
-                  },
-                  "parent": [Circular],
-                  "prev": null,
-                  "type": "text",
-                },
-                Object {
-                  "attribs": Object {
-                    "style": "display:contents",
-                  },
-                  "children": Array [
-                    Object {
-                      "attribs": Object {
-                        "id": "positive-number",
-                        "max": "10",
-                        "required": "",
-                        "type": "number",
-                      },
-                      "children": Array [],
-                      "name": "input",
-                      "namespace": "http://www.w3.org/1999/xhtml",
-                      "next": null,
-                      "parent": [Circular],
-                      "prev": null,
-                      "type": "tag",
-                      "x-attribsNamespace": Object {
-                        "id": undefined,
-                        "max": undefined,
-                        "required": undefined,
-                        "type": undefined,
-                      },
-                      "x-attribsPrefix": Object {
-                        "id": undefined,
-                        "max": undefined,
-                        "required": undefined,
-                        "type": undefined,
-                      },
-                    },
-                  ],
-                  "name": "div",
-                  "namespace": "http://www.w3.org/1999/xhtml",
-                  "next": null,
-                  "parent": [Circular],
-                  "prev": Object {
-                    "data": "Positive Number",
-                    "next": [Circular],
-                    "parent": [Circular],
-                    "prev": null,
-                    "type": "text",
-                  },
-                  "type": "tag",
-                  "x-attribsNamespace": Object {
-                    "style": undefined,
-                  },
-                  "x-attribsPrefix": Object {
-                    "style": undefined,
-                  },
-                },
-              ],
-              "name": "label",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": [Circular],
-              "parent": [Circular],
-              "prev": null,
-              "type": "tag",
-              "x-attribsNamespace": Object {},
-              "x-attribsPrefix": Object {},
-            },
+            "prev": null,
             "type": "tag",
             "x-attribsNamespace": Object {},
             "x-attribsPrefix": Object {},
@@ -1417,9 +758,11 @@ initialize {
         },
         "type": "tag",
         "x-attribsNamespace": Object {
+          "id": undefined,
           "type": undefined,
         },
         "x-attribsPrefix": Object {
+          "id": undefined,
           "type": undefined,
         },
       },

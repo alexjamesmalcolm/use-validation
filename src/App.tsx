@@ -24,21 +24,52 @@ const isPokemon = (name: string) => {
     .catch((e) => e.message);
 };
 
-const App = () => {
-  const PositiveNumberValidator = useValidation(isNumberPositive);
-  const DebouncedPositiveNumberValidator = useValidation(isNumberPositive, {
-    debounceWait: 2000,
-  });
-  const [pokemonType, setPokemonType] = useState();
+const defaultFunction = () => {};
+
+const App = ({ onSubmit = defaultFunction }) => {
+  // const PositiveNumberValidator = useValidation(isNumberPositive);
+  // const DebouncedPositiveNumberValidator = useValidation(isNumberPositive, {
+  // debounceWait: 2000,
+  // });
   const [pokemonName, setPokemonName] = useState();
-  const PokemonNameValidator = useValidation(isPokemon, { debounceWait: 2000 });
+  // const PokemonNameValidator = useValidation(isPokemon, { debounceWait: 2000 });
   const handlePokemonNameChange = useCallback(
     (e) => setPokemonName(e.target.value),
     []
   );
+  const [firstMatch, setFirstMatch] = useState("");
+  const [secondMatch, setSecondMatch] = useState("");
+  const handleFirstMatchChange = useCallback(
+    (e) => setFirstMatch(e.target.value),
+    []
+  );
+  const handleSecondMatchChange = useCallback(
+    (e) => setSecondMatch(e.target.value),
+    []
+  );
+  const isFirstMatchValid = useCallback<(value: string) => string | boolean>(
+    (value) => {
+      console.log("isFirstMatchValid");
+      return value === secondMatch ? true : `Does not match ${secondMatch}`;
+    },
+    [secondMatch]
+  );
+  const isSecondMatchValid = useCallback<(value: string) => string | boolean>(
+    (value) => {
+      console.log("isSecondMatchValid");
+      return value === firstMatch ? true : `Does not match ${firstMatch}`;
+    },
+    [firstMatch]
+  );
+  const FirstMatchValidator = useValidation(isFirstMatchValid, {
+    debounceWait: 1000,
+  });
+  const SecondMatchValidator = useValidation(isSecondMatchValid, {
+    debounceWait: 1000,
+  });
   return (
-    <form className={styles.container}>
-      <label>
+    <form className={styles.container} onSubmit={onSubmit}>
+      {/* <label>
         Positive Number
         <PositiveNumberValidator>
           <input id="positive-number" max="10" type="number" required />
@@ -51,7 +82,7 @@ const App = () => {
         </DebouncedPositiveNumberValidator>
       </label>
       <label>
-        Pokemon name
+        Pokemon name: {pokemonName}
         <PokemonNameValidator>
           <input
             id="pokemon-name"
@@ -61,8 +92,32 @@ const App = () => {
             onChange={handlePokemonNameChange}
           />
         </PokemonNameValidator>
+      </label> */}
+      <label>
+        First of Match: {firstMatch}
+        <FirstMatchValidator>
+          <input
+            id="first-match"
+            type="text"
+            required
+            value={firstMatch}
+            onChange={handleFirstMatchChange}
+          />
+        </FirstMatchValidator>
       </label>
-      <input type="submit" />
+      <label>
+        Second of Match: {secondMatch}
+        <SecondMatchValidator>
+          <input
+            id="second-match"
+            type="text"
+            required
+            value={secondMatch}
+            onChange={handleSecondMatchChange}
+          />
+        </SecondMatchValidator>
+      </label>
+      <input id="submit" type="submit" />
     </form>
   );
 };
