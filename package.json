@@ -59,6 +59,9 @@
     "output-size": "node ./get-size.js",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
+  "files": [
+    "output"
+  ],
   "eslintConfig": {
     "extends": "react-app"
   },
