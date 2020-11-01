@@ -1,7 +1,13 @@
-import React, { useCallback, useEffect, useRef, useMemo } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useRef,
+  useMemo,
+  ReactNode,
+} from "react";
 
 type ValidationResponse = string | boolean;
-type Validator = (
+export type Validator = (
   value: any
 ) => ValidationResponse | Promise<ValidationResponse>;
 
@@ -80,14 +86,20 @@ const useValidation = (validator: Validator, options: Options = {}) => {
   }, [checkValidity, setMessage]);
   useEffect(() => {
     reportValidity();
-  }, [reportValidity, validator]);
+    reportValidityRef.current = reportValidity;
+  }, [reportValidity]);
+  const reportValidityRef = useRef(reportValidity);
   return useCallback(
-    ({ children }) => (
-      <div onChangeCapture={reportValidity} ref={parent} style={style}>
+    ({ children }: { children: ReactNode }) => (
+      <div
+        onChangeCapture={reportValidityRef.current}
+        ref={parent}
+        style={style}
+      >
         {children}
       </div>
     ),
-    [reportValidity]
+    []
   );
 };
 
