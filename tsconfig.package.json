@@ -15,7 +15,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
-    "jsx": "react"
+    "jsx": "react-jsx"
   },
   "include": ["src/lib"],
   "exclude": ["**/*test.ts", "**/*test.tsx"]
