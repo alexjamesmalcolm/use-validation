@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { ChangeEventHandler, useCallback, useEffect, useState } from "react";
 import useValidation, { Validator } from "./lib/useValidation";
 import styles from "./App.module.css";
 
@@ -16,11 +16,13 @@ const App = ({ onSubmit = defaultFunction }) => {
     },
     [desiredValue]
   );
-  const handleDesiredValueChange = useCallback(
-    (e) => setDesiredValue(e.target.value),
+  const handleDesiredValueChange = useCallback<
+    ChangeEventHandler<HTMLInputElement>
+  >((e) => setDesiredValue(e.target.value), []);
+  const handleValueChange = useCallback<ChangeEventHandler<HTMLInputElement>>(
+    (e) => setValue(e.target.value),
     []
   );
-  const handleValueChange = useCallback((e) => setValue(e.target.value), []);
   useEffect(() => {
     const intervalId = setInterval(
       () => setDesiredValue(Math.floor(Math.random() * 100).toString()),

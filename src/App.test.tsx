@@ -1,12 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { mount, render } from "enzyme";
+import { createRoot } from "react-dom/client";
 import App from "./App";
-import { wait } from "@testing-library/react";
 
 it("should render without crashing", () => {
   const div = document.createElement("div");
-  ReactDOM.render(<App />, div);
+  const root = createRoot(div);
+  root.render(<App />);
 });
 
 // test("typing in the positive number field", () => {
