@@ -1,14 +1,35 @@
 import { ChangeEventHandler, useCallback, useEffect, useState } from "react";
-import useValidation, { Validator } from "./lib/useValidation";
+import useValidation, {
+  CacheOptions,
+  ValidationResponse,
+  Validator,
+} from "./lib/useValidation";
 import styles from "./App.module.css";
 
 const defaultFunction = () => {};
+
+let cache: Record<string, ValidationResponse> = {};
+
+const cacheOptions: CacheOptions<string> = {
+  setCache: (value, validationResponse) => {
+    console.log("Setting cache", value, validationResponse);
+    cache[value] = validationResponse;
+  },
+  getCache: (value) => {
+    console.log(`Retrieving from cache`, value, cache[value]);
+    return cache[value];
+  },
+};
+const clearCache = () => {
+  cache = {};
+};
 
 const App = ({ onSubmit = defaultFunction }) => {
   const [desiredValue, setDesiredValue] = useState<string>("19");
   const [value, setValue] = useState<string>("");
   const isDesiredValue = useCallback<Validator>(
     (value) => {
+      console.log(`Checking if value is valid`, value);
       if (value !== desiredValue) {
         return `Is not desired value: ${desiredValue}`;
       }
@@ -24,13 +45,15 @@ const App = ({ onSubmit = defaultFunction }) => {
     []
   );
   useEffect(() => {
-    const intervalId = setInterval(
-      () => setDesiredValue(Math.floor(Math.random() * 100).toString()),
-      2000
-    );
+    const intervalId = setInterval(() => {
+      setDesiredValue(Math.floor(Math.random() * 100).toString());
+      clearCache();
+    }, 10000);
     return () => clearInterval(intervalId);
   }, []);
-  const Validator = useValidation(isDesiredValue);
+  const Validator = useValidation(isDesiredValue, {
+    cache: cacheOptions,
+  });
   return (
     <form className={styles.container} onSubmit={onSubmit}>
       <label>
