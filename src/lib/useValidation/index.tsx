@@ -6,20 +6,46 @@ import {
   PropsWithChildren,
 } from "react";
 
-type ValidationResponse = string | boolean;
+interface ValidResponse {
+  isValid: true;
+}
+interface InvalidResponse {
+  isValid: false;
+  errorMessage?: string;
+}
+
+export type ValidationResponse =
+  | string
+  | boolean
+  | ValidResponse
+  | InvalidResponse;
+
 export type Validator<Value extends unknown = string> = (
   value: Value
 ) => ValidationResponse | Promise<ValidationResponse>;
 
 const style = { display: "contents" };
 
+export interface CacheOptions<Value extends unknown> {
+  getCache: (value: Value) => ValidationResponse;
+  setCache: (value: Value, validationResponse: ValidationResponse) => void;
+}
+
 interface Options<Value extends unknown = string> {
   debounceWait?: number;
-  getValueFromInput?: (input: HTMLInputElement) => Value;
-  getInputFromWrapper?: (wrapper: HTMLDivElement) => HTMLInputElement;
+  cache?: CacheOptions<Value>;
+  getValueFromInput?: (input: FormField) => Value;
+  getInputFromWrapper?: (wrapper: HTMLDivElement) => FormField;
+  genericInvalidMessage?: string;
 }
 
 type ValidationComponent = ({ children }: PropsWithChildren<{}>) => JSX.Element;
+
+type FormField = HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+const isFormField = (element: Element): element is FormField =>
+  element instanceof HTMLInputElement ||
+  element instanceof HTMLTextAreaElement ||
+  element instanceof HTMLSelectElement;
 
 const useValidation = <Value extends unknown = string>(
   validator: Validator<Value>,
@@ -31,36 +57,44 @@ const useValidation = <Value extends unknown = string>(
     () => options.debounceWait || 0,
     [options.debounceWait]
   );
+  const genericInvalidMessage = useMemo<string>(
+    () => options.genericInvalidMessage || "Invalid",
+    [options.genericInvalidMessage]
+  );
   const getValueFromInput = useMemo(
     () =>
-      options.getValueFromInput ||
-      ((input: HTMLInputElement) => input.value as Value),
+      options.getValueFromInput || ((input: FormField) => input.value as Value),
     [options.getValueFromInput]
   );
-  const actOnInput = useCallback(
-    (callback: (input: HTMLInputElement) => void) => {
-      parent.current &&
-        callback(
-          (
-            options.getInputFromWrapper ||
-            ((wrapper: HTMLDivElement) =>
-              wrapper.children[0] as HTMLInputElement)
-          )(parent.current)
-        );
-    },
-    [options.getInputFromWrapper]
-  );
+  const getInput = useCallback((): FormField | undefined => {
+    if (parent.current) {
+      if (options.getInputFromWrapper) {
+        return options.getInputFromWrapper(parent.current);
+      }
+      const element = parent.current.children[0];
+      if (element && isFormField(element)) return element;
+    }
+  }, [options]);
   const setMessage = useCallback(
     (message: string) => {
-      actOnInput((input) => input.setCustomValidity(message));
+      const input = getInput();
+      if (input) {
+        input.setCustomValidity(message);
+      }
     },
-    [actOnInput]
+    [getInput]
   );
-  type Resolve = (value?: unknown) => void;
+  type Resolve = (
+    value: ValidationResponse | PromiseLike<ValidationResponse>
+  ) => void;
   const debouncedValidation = useMemo<(resolve: Resolve) => void>(() => {
     window.clearTimeout(timeoutId.current);
     const validatorFunc = (resolve: Resolve) => {
-      actOnInput((input) => resolve(validator(getValueFromInput(input))));
+      const input = getInput();
+      if (input) {
+        const value = getValueFromInput(input);
+        resolve(validator(value));
+      }
     };
     if (debounceWait === 0) {
       return validatorFunc;
@@ -71,30 +105,77 @@ const useValidation = <Value extends unknown = string>(
         validatorFunc(resolve);
       }, debounceWait);
     };
-  }, [actOnInput, debounceWait, getValueFromInput, validator]);
-  const checkValidity = useCallback(
-    () =>
-      new Promise((resolve) => {
-        setMessage("Validating...");
-        debouncedValidation(resolve);
-      }),
-    [debouncedValidation, setMessage]
-  );
-  const reportValidity = useCallback(() => {
-    checkValidity().then((validityCheckResult) => {
-      setMessage(
-        typeof validityCheckResult === "string"
-          ? validityCheckResult
-          : !validityCheckResult
-          ? "Invalid"
-          : ""
-      );
+  }, [debounceWait, getInput, getValueFromInput, validator]);
+
+  const checkCache = useCallback(() => {
+    if (options.cache) {
+      const input = getInput();
+      if (input) {
+        return options.cache.getCache(getValueFromInput(input));
+      }
+    }
+  }, [getInput, getValueFromInput, options]);
+
+  const checkValidity = useCallback(():
+    | ValidationResponse
+    | Promise<ValidationResponse> => {
+    const cachedValidation = checkCache();
+    if (cachedValidation !== undefined) {
+      return cachedValidation;
+    }
+    return new Promise<ValidationResponse>((resolve) => {
+      setMessage("Validating...");
+      debouncedValidation(resolve);
+    }).then((validationResponse) => {
+      if (options.cache) {
+        const input = getInput();
+        if (input) {
+          const value = getValueFromInput(input);
+          options.cache.setCache(value, validationResponse);
+        }
+      }
+      return validationResponse;
     });
-  }, [checkValidity, setMessage]);
+  }, [
+    checkCache,
+    debouncedValidation,
+    getInput,
+    getValueFromInput,
+    options.cache,
+    setMessage,
+  ]);
+
+  const getErrorMessage = useCallback(
+    (validationResponse: ValidationResponse): string => {
+      // If the string is an empty string "" then that is considered a valid response, if the string is not empty that is considered an invalid response
+      if (typeof validationResponse === "string") return validationResponse;
+
+      // Returning an empty string to handle all valid scenarios
+      if (
+        validationResponse === true ||
+        (typeof validationResponse === "object" && validationResponse.isValid)
+      )
+        return "";
+
+      // Returning either the error message provided, the generic error message, which can also be overridden
+      return (
+        (validationResponse !== false && validationResponse.errorMessage) ||
+        genericInvalidMessage
+      );
+    },
+    [genericInvalidMessage]
+  );
+
+  const reportValidity = useCallback(
+    async () => setMessage(getErrorMessage(await checkValidity())),
+    [checkValidity, getErrorMessage, setMessage]
+  );
+
   useEffect(() => {
     reportValidity();
     reportValidityRef.current = reportValidity;
   }, [reportValidity]);
+
   const reportValidityRef = useRef(reportValidity);
   return useCallback<ValidationComponent>(
     ({ children }) => (
