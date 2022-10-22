@@ -57,10 +57,6 @@ const useValidation = <Value extends unknown = string>(
     () => options.debounceWait || 0,
     [options.debounceWait]
   );
-  const genericInvalidMessage = useMemo<string>(
-    () => options.genericInvalidMessage || "Invalid",
-    [options.genericInvalidMessage]
-  );
   const getValueFromInput = useMemo(
     () =>
       options.getValueFromInput || ((input: FormField) => input.value as Value),
@@ -158,12 +154,13 @@ const useValidation = <Value extends unknown = string>(
         return "";
 
       // Returning either the error message provided, the generic error message, which can also be overridden
+      const { genericInvalidMessage = "Invalid" } = options;
       return (
         (validationResponse !== false && validationResponse.errorMessage) ||
         genericInvalidMessage
       );
     },
-    [genericInvalidMessage]
+    [options]
   );
 
   const reportValidity = useCallback(
