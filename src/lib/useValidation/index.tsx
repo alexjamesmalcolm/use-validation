@@ -27,7 +27,7 @@ export type Validator<Value extends unknown = string> = (
 const style = { display: "contents" };
 
 export interface CacheOptions<Value extends unknown> {
-  getCache: (value: Value) => ValidationResponse;
+  getCache: (value: Value) => ValidationResponse | undefined;
   setCache: (value: Value, validationResponse: ValidationResponse) => void;
 }
 
