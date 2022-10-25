@@ -31,9 +31,12 @@ const App = ({ onSubmit = defaultFunction }) => {
     (value) => {
       console.log(`Checking if value is valid`, value);
       if (value !== desiredValue) {
-        return `Is not desired value: ${desiredValue}`;
+        return {
+          isValid: false,
+          errorMessage: `Is not desired value: ${desiredValue}`,
+        };
       }
-      return true;
+      return { isValid: true };
     },
     [desiredValue]
   );
