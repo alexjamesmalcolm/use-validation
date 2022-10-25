@@ -14,11 +14,7 @@ interface InvalidResponse {
   errorMessage?: string;
 }
 
-export type ValidationResponse =
-  | string
-  | boolean
-  | ValidResponse
-  | InvalidResponse;
+export type ValidationResponse = ValidResponse | InvalidResponse;
 
 export type Validator<Value extends unknown = string> = (
   value: Value
@@ -142,24 +138,12 @@ const useValidation = <Value extends unknown = string>(
   ]);
 
   const getErrorMessage = useCallback(
-    (validationResponse: ValidationResponse): string => {
-      // If the string is an empty string "" then that is considered a valid response, if the string is not empty that is considered an invalid response
-      if (typeof validationResponse === "string") return validationResponse;
-
-      // Returning an empty string to handle all valid scenarios
-      if (
-        validationResponse === true ||
-        (typeof validationResponse === "object" && validationResponse.isValid)
-      )
-        return "";
-
-      // Returning either the error message provided, the generic error message, which can also be overridden
-      const { genericInvalidMessage = "Invalid" } = options;
-      return (
-        (validationResponse !== false && validationResponse.errorMessage) ||
-        genericInvalidMessage
-      );
-    },
+    (validationResponse: ValidationResponse): string =>
+      validationResponse.isValid
+        ? ""
+        : validationResponse.errorMessage ||
+          options.genericInvalidMessage ||
+          "Invalid",
     [options]
   );
 
