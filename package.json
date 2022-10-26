@@ -15,6 +15,7 @@
     "validation",
     "form",
     "input",
+    "Constraint Validation API",
     "setCustomValidity"
   ],
   "repository": {
